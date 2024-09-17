@@ -18,11 +18,20 @@ spec:
         - name: sqlserver-container
           env:
             - name: ACCEPT_EULA
-              value: "Y"
+              valueFrom:
+                configMapKeyRef:
+                  name: sqlserver-configmap
+                  key: ACCEPT_EULA
             - name: MSSQL_PID
-              value: Developer
+              valueFrom:
+                configMapKeyRef:
+                  name: sqlserver-configmap
+                  key: MSSQL_PID
             - name: SA_PASSWORD
-              value: SqlServer2019!
+              valueFrom:
+                secretKeyRef:
+                  name: sqlserver-sercrets
+                  key: SA_PASSWORD                  
           image: mcr.microsoft.com/mssql/server:2019-latest          
           ports:
             - containerPort: 1433
