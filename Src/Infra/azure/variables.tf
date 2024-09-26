@@ -4,10 +4,22 @@ variable "resource_group_location" {
   description = "Location of the resource group."
 }
 
-variable "resource_group_name_prefix" {
+variable "resource_group_name" {
   type        = string
-  default     = "rg"
-  description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
+  default     = "fiap-pos-tech-aks-rg"
+  description = "Resource group name in your Azure subscription."
+}
+
+variable "kubernetes_cluster_name" {
+  type        = string
+  default     = "fiap-pos-tech-k8s-cluster"
+  description = "Kubernetes cluster name in your Azure subscription."
+}
+
+variable "kubernetes_cluster_dns" {
+  type        = string
+  default     = "fiap-pos-tech-k8s-dns"
+  description = "Kubernetes cluster dns in your Azure subscription."
 }
 
 variable "node_count" {
@@ -26,4 +38,10 @@ variable "username" {
   type        = string
   description = "The admin username for the new cluster."
   default     = "azureadmin"
+}
+
+variable "ssh_key_name" {
+  type        = string
+  description = "The ssh key for the new cluster."
+  default     = "azapisshkey"
 }
