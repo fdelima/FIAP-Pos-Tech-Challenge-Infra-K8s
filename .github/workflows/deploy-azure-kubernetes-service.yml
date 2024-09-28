@@ -21,8 +21,8 @@ env:
   DEPLOYMENT_MANIFEST_PATH: "./Src/Infra/Azure/toDeploy/"
 
 jobs:
-  on-success:
-    deploy:
+  # on-success:
+  deploy:
     runs-on: self-hosted    
 
     steps:
@@ -39,10 +39,10 @@ jobs:
           cp ./01-sqlserver/05-mssqltools-pod.yaml ${{ env.DEPLOYMENT_MANIFEST_PATH }}/
           cp -r ./02-api/ ${{ env.DEPLOYMENT_MANIFEST_PATH }}/
 
-        - name: List files in the ./Src/Infra/Azure
-          working-directory: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
-          run: |
-              ls
+      - name: List files in the ./Src/Infra/Azure
+        working-directory: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
+        run: |
+            ls
 
       # Logs in with your Azure credentials
       - name: Azure login
