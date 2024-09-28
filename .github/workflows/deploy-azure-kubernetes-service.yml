@@ -18,7 +18,7 @@ permissions:
 env:
   RESOURCE_GROUP: "fiap-pos-tech-aks-rg"
   CLUSTER_NAME: "fiap-pos-tech-k8s-cluster"
-  DEPLOYMENT_MANIFEST_PATH: "./Src/Infra/Azure/toDeploy/"
+  DEPLOYMENT_MANIFEST_PATH: "./Src/Infra/Azure/toDeploy"
 
 jobs:
   # on-success:
