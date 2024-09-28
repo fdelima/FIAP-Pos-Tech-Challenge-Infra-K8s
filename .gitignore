@@ -399,9 +399,9 @@ FodyWeavers.xsd
 
 
 # terraform
-Src/Infra/Azure/.terraform/
-Src/Infra/Azure/.terraform.lock.hcl
-Src/Infra/Azure/main.destroy.tfplan
-Src/Infra/Azure/main.tfplan
-Src/Infra/Azure/terraform.tfstate
-Src/Infra/Azure/terraform.tfstate.backup
+Src/Infra/Azure_old/.terraform/
+Src/Infra/Azure_old/.terraform.lock.hcl
+Src/Infra/Azure_old/main.destroy.tfplan
+Src/Infra/Azure_old/main.tfplan
+Src/Infra/Azure_old/terraform.tfstate
+Src/Infra/Azure_old/terraform.tfstate.backup
