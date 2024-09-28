@@ -1,10 +1,14 @@
 name: Deploy APP TO AKS
 
 on:
-  workflow_run:
-    workflows: ["Deploy Terraform In Azure with User-assigned Managed Identity"]
-    types:
-      - completed
+  push:
+    branches: [ "develop", "feature/pipeline" ]
+  pull_request:
+    branches: [ "develop", "main" ]
+  # workflow_run:
+  #   workflows: ["Deploy Terraform In Azure with User-assigned Managed Identity"]
+  #   types:
+  #     - completed
 
 permissions:
   id-token: write
