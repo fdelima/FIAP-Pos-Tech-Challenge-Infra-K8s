@@ -1,4 +1,10 @@
 # FIAP-Pos-Tech-Challenge-Infra-K8s
 FIAP Pos Tech Challenge Infraestrutura Kubernetes
 
-Colocar aqui o scripts para provisionamento do K8s na nuvem.
+Microsoft Azure foi nossa cloud escolhida.
+
+# Arquitetura K8s
+### Desenvolvida na fase 2 
+![image](/Documentacao/FIAP-Pos-Tech-Challenge-fase2.png)
+
+
