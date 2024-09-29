@@ -7,5 +7,5 @@ metadata:
 spec:
   containers:
     - name: mssqltools-container
-      image: fdelima/fiap-pos-techchallenge-gurpo-71-scripts-database:fase3
+      image: fdelima/fiap-pos-techchallenge-gurpo-71-scripts-database:fase3az
   restartPolicy: Never
