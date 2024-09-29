@@ -2,7 +2,7 @@ name: Deploy APP TO AKS
 
 on:
   workflow_run:
-    workflows: ["Deploy Terraform In Azure with User-assigned Managed Identity"]
+    workflows: [deploy-terraform-infrastructure-in-azure]
     types:
       - completed
 
