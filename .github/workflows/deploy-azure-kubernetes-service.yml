@@ -2,7 +2,7 @@ name: Deploy APP TO AKS
 
 on:
   workflow_run:
-    workflows: [deploy-terraform-infrastructure-in-azure]
+    workflows: ["Deploy Terraform In Azure with User-assigned Managed Identity"]
     types:
       - completed
 
@@ -17,7 +17,7 @@ env:
   DEPLOYMENT_MANIFEST_PATH: "./Src/Infra/Azure/toDeploy"
 
 jobs:
-  on-success:
+  deploy:
     runs-on: self-hosted    
 
     steps:
